@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | BlessedStack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            margin: 0; background: #020617; color: #f0f5ff; 
+            font-family: 'Inter', sans-serif; padding: 40px 20px; 
+        }
+        .header { display: flex; align-items: center; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .back-btn { 
+            color: #d4af37; text-decoration: none; width: 45px; height: 45px; 
+            background: rgba(255,255,255,0.05); border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; margin-right: 15px;
+        }
+        h2 { color: #d4af37; margin: 0; font-size: 1.5rem; }
+        
+        .project-grid { display: grid; gap: 20px; max-width: 500px; margin: 0 auto; }
+        .project-card { 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 175, 55, 0.3); 
+            padding: 25px; border-radius: 20px; text-decoration: none; color: white; 
+            transition: 0.3s ease; display: block;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: #d4af37; background: rgba(212, 175, 55, 0.05); }
+        .project-card h3 { margin: 0 0 10px 0; color: #d4af37; font-size: 1.3rem; }
+        .project-card p { margin: 0; font-size: 0.9rem; opacity: 0.7; line-height: 1.5; }
+        .visit-link { margin-top: 15px; display: block; font-size: 0.8rem; font-weight: bold; color: #d4af37; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        <h2>Website Gallery</h2>
+    </div>
+
+    <div class="project-grid">
+        <a href="#" class="project-card">
+            <h3>Project One</h3>
+            <p>A high-end professional website built for a specific client niche.</p>
+            <span class="visit-link">Visit Site <i class="fas fa-external-link-alt"></i></span>
+        </a>
+
+        <a href="#" class="project-card">
+            <h3>Project Two</h3>
+            <p>An interactive web application designed with modern UI/UX principles.</p>
+            <span class="visit-link">Visit Site <i class="fas fa-external-link-alt"></i></span>
+        </a>
+    </div>
+</body>
+  </html>
