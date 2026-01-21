@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedStack | My Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --deep-blue: #040d21; /* Darker, richer blue */
+            --gold: #d4af37;
+            --white: #f0f5ff;
+            --card-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--deep-blue);
+            background-image: radial-gradient(circle at top, #0a192f 0%, #040d21 100%);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 15px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            object-fit: cover;
+        }
+
+        h1 {
+            color: var(--gold);
+            margin: 5px 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            margin-bottom: 35px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 16px 20px;
+            border-radius: 50px; /* Rounded pill shape */
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        .link-card i {
+            margin-right: 12px;
+            font-size: 1.2rem;
+            width: 25px; /* Keeps icons aligned */
+            text-align: center;
+        }
+
+        .link-card:hover {
+            background: var(--gold);
+            color: var(--deep-blue);
+            transform: scale(1.05);
+            border-color: var(--gold);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 50px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://ui-avatars.com/api/?name=Blessed+Stack&background=d4af37&color=040d21" alt="Profile" class="profile-img">
+
+    <h1>BlessedStack</h1>
+    <div class="tagline">Stay Blessed</div>
+
+    <div class="links-container">
+        <a href="#" class="link-card"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="link-card"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="#" class="link-card"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="#" class="link-card"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="link-card"><i class="fas fa-globe"></i> My Website</a>
+    </div>
+
+    <footer>
+        &copy; 2026 BLESSEDSTACK | GRACE & FAVOR
+    </footer>
+
+</body>
+</html>
