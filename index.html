@@ -3,98 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlessedStack | Master Hub</title>
+    <title>BlessedStack | Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        :root { --bg: #020617; --text: #f0f5ff; --gold: #d4af37; --glass: rgba(255, 255, 255, 0.05); }
-        [data-theme="light"] { --bg: #fdfcf0; --text: #1a1a1a; --gold: #b8860b; --glass: rgba(0, 0, 0, 0.05); }
+        :root { 
+            --bg: #020617; 
+            --text: #f0f5ff; 
+            --gold: #d4af37; 
+            --glass: rgba(255, 255, 255, 0.05); 
+        }
+        [data-theme="light"] { 
+            --bg: #fdfcf0; 
+            --text: #1a1a1a; 
+            --gold: #b8860b; 
+            --glass: rgba(0, 0, 0, 0.05); 
+        }
 
         body { 
             margin: 0; background: var(--bg); color: var(--text); 
-            font-family: 'Inter', sans-serif; display: flex; 
-            flex-direction: column; align-items: center; min-height: 100vh; padding: 60px 20px; 
-            transition: 0.3s;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; flex-direction: column; align-items: center; 
+            min-height: 100vh; padding: 60px 20px; transition: 0.3s; 
+            text-align: center;
         }
         
-        /* Profile Image */
-        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 10px; }
-        h1 { color: var(--gold); margin: 10px 0; letter-spacing: -1px; }
+        .profile-img { 
+            width: 100px; height: 100px; border-radius: 50%; 
+            border: 2px solid var(--gold); margin-bottom: 10px; 
+        }
+        
+        h1 { color: var(--gold); margin: 10px 0; font-size: 2.2rem; font-weight: 800; }
         .tagline { opacity: 0.6; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
 
-        /* Links */
-        #links-container { width: 100%; max-width: 350px; display: flex; flex-direction: column; gap: 15px; }
+        .links-container { width: 100%; max-width: 350px; display: flex; flex-direction: column; gap: 15px; }
+
         .link-card { 
             background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); 
-            padding: 16px; border-radius: 15px; text-decoration: none; color: var(--text); 
-            display: flex; align-items: center; justify-content: center; font-weight: 600; transition: 0.3s;
+            padding: 18px; border-radius: 15px; text-decoration: none; color: var(--text); 
+            display: flex; align-items: center; justify-content: center; 
+            font-weight: 600; transition: 0.3s;
         }
-        .link-card:hover { background: var(--gold); color: white; transform: translateY(-2px); }
-
-        /* QR Modal */
-        #qr-modal {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); z-index: 100; justify-content: center; align-items: center; flex-direction: column;
-        }
-        #qrcode { background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
-        
-        .btn-action {
-            margin-top: 20px; background: none; border: 1px solid var(--gold);
-            color: var(--gold); padding: 10px 20px; border-radius: 25px; cursor: pointer;
-        }
+        .link-card:hover { background: var(--gold); color: white; transform: scale(1.02); border-color: var(--gold); }
 
         .theme-btn { position: absolute; top: 20px; right: 20px; color: var(--gold); font-size: 1.2rem; cursor: pointer; }
+        .btn-action { margin-top: 30px; background: none; border: 1px solid var(--gold); color: var(--gold); padding: 10px 20px; border-radius: 25px; cursor: pointer; }
+        
+        #qr-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; justify-content: center; align-items: center; flex-direction: column; }
+        #qrcode { background: white; padding: 20px; border-radius: 15px; }
     </style>
 </head>
 <body>
 
     <div class="theme-btn" onclick="toggleTheme()"><i class="fas fa-adjust"></i></div>
 
-    <img src="https://ui-avatars.com/api/?name=Blessed&background=d4af37&color=020617" class="profile-img">
+    <img src="https://ui-avatars.com/api/?name=Blessed+Stack&background=d4af37&color=020617" class="profile-img">
     <h1>BlessedStack</h1>
     <div class="tagline">Favor & Tech</div>
 
-    <div id="links-container">
-        <p style="text-align:center; opacity:0.5;">Loading links...</p>
+    <div class="links-container">
+        <a href="projects.html" class="link-card"><i class="fas fa-gem" style="margin-right:10px;"></i> My Website Gallery</a>
+        <a href="https://instagram.com/yourprofile" class="link-card"><i class="fab fa-instagram" style="margin-right:10px;"></i> Instagram</a>
+        <a href="https://tiktok.com/@yourprofile" class="link-card"><i class="fab fa-tiktok" style="margin-right:10px;"></i> TikTok</a>
+        <a href="https://facebook.com/yourprofile" class="link-card"><i class="fab fa-facebook" style="margin-right:10px;"></i> Facebook</a>
+        <a href="https://youtube.com/@yourchannel" class="link-card"><i class="fab fa-youtube" style="margin-right:10px;"></i> YouTube</a>
     </div>
 
-    <button class="btn-action" onclick="showQR()"><i class="fas fa-qrcode"></i> Share My QR Code</button>
+    <button class="btn-action" onclick="showQR()"><i class="fas fa-qrcode"></i> Share My QR</button>
 
     <div id="qr-modal" onclick="this.style.display='none'">
         <div id="qrcode"></div>
-        <p style="color:white; font-weight:bold;">Tap anywhere to close</p>
+        <p style="color:white; margin-top:15px; font-weight: bold;">Scan to open BlessedStack</p>
     </div>
 
     <script>
-        // 1. YOUR GOOGLE SHEET CSV LINK
-        const SHEET_URL = 'YOUR_GOOGLE_SHEET_CSV_LINK_HERE';
-
-        // 2. Fetch Links from Sheets
-        async function fetchLinks() {
-            try {
-                const response = await fetch(SHEET_URL);
-                const data = await response.text();
-                const rows = data.split('\n').slice(1);
-                const container = document.getElementById('links-container');
-                container.innerHTML = '';
-                rows.forEach(row => {
-                    const cols = row.split(',');
-                    if(cols.length >= 2) {
-                        const a = document.createElement('a');
-                        a.href = cols[1].trim();
-                        a.className = 'link-card';
-                        a.innerHTML = cols[0].trim();
-                        container.appendChild(a);
-                    }
-                });
-            } catch (e) { console.log("Sheet Error"); }
-        }
-
-        // 3. QR Code Generator
+        // QR Code Generator Function
         function showQR() {
             const modal = document.getElementById('qr-modal');
             const qrBox = document.getElementById('qrcode');
-            qrBox.innerHTML = ''; // Clear previous
+            qrBox.innerHTML = '';
             new QRCode(qrBox, {
                 text: window.location.href,
                 width: 200,
@@ -105,13 +92,14 @@
             modal.style.display = 'flex';
         }
 
+        // Theme Toggle Function
         function toggleTheme() {
-            document.body.hasAttribute('data-theme') ? 
-            document.body.removeAttribute('data-theme') : 
-            document.body.setAttribute('data-theme', 'light');
+            if (document.body.hasAttribute('data-theme')) {
+                document.body.removeAttribute('data-theme');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+            }
         }
-
-        fetchLinks();
     </script>
 </body>
-    </html>
+        </html>
